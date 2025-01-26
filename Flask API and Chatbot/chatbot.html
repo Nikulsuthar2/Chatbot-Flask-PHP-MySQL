@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainbody">
+        <div class="user-section">
+            <div style="width: 15%;">User :</div>
+            <div id="user-input" style="width: 85%;"></div>
+        </div>
+        <div class="bot-section">
+            <div style="width: 15%;">Bot :</div>
+            <div id="result" class="result">
+                <code>
+                    print('hello word')
+                </code>
+            </div>
+        </div>
+        <div class="input-section">
+            <input id="input" type="text"  name="input">
+            <input type="button" onclick="send()" value="ok">
+        </div>
+    </div>
+    <script>
+        var input = document.getElementById("input");
+        var userinput = document.getElementById("user-input");
+        var result = document.getElementById("result")
+        function send(){
+            userinput.innerHTML = input.value.trim();
+            result.innerHTML = "";
+            let xhr1 = new XMLHttpRequest();
+            xhr1.open("GET", "http://127.0.0.1:5000/hello/?input="+input.value.trim() , true);
+            //xhr1.withCredentials = true;
+            xhr1.setRequestHeader("Content-Type","application/json; charset=utf-8")
+            //xhr1.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+            xhr1.onload = () =>{
+                if(xhr1.readyState === XMLHttpRequest.DONE){
+                    if(xhr1.status === 200){
+                        let data = JSON.parse(xhr1.response)
+                        let output = data.message
+                        output = output.replace(/</g,"&lt;")
+                        output = output.replace(/>/g,"&gt;")
+                        output = output.replace(/\\t/g,"&nbsp;&nbsp;&nbsp;&nbsp;")
+                        output = output.replace(/[CODESTART]/g,"<code>")
+                        output = output.replace(/[CODEEND]/g,"</code>")
+                        output = output.replace(/\\n/g,"<br>")
+                        var words = output.split(" ")
+                        const interval = setInterval(() => {
+                            result.innerHTML += words[0] + " ";
+                            words = words.slice(1);
+
+                            if(!words.length){
+                                clearInterval(interval);
+                            }
+                        },300)
+                    }
+                }
+            }
+            xhr1.send();
+        }
+    </script>
+</body>
+</html>

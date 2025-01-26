@@ -1,0 +1,17 @@
+input,output
+structure of html,Basic structure of html :-\n\n <CODESTART><CODELN-HTML><html> \n\t<head> \n\t\t<title>document</tittle> \n\t</head> \n\t<body> \n\t\t<p>Hello world</p> \n\t</body> \n</html><CODEEND> \nTo make it HTML5 you can use \n\n <CODESTART><CODELN-HTML><!DOCTYPE html><CODEEND>
+basic html tag,"<html>, <head>, <body> are the basic html tags"
+line break tag in html,<br> tag is used to line break
+new line in html,<br> tag is used for newline
+syntax of html5,<!DOCTYPE html>
+syntax of html doctype,<!DOCTYPE html>
+what is the use of head tag in html,"The HEAD element contains header information about the document, such as its title, keywords, and description."
+syntax of head tag in html,<head></head>
+what is the use of title tag in html,"The TITLE element gives the document’s title and is typically shown in the title bar of the browser’s window."
+syntax of title tag in html,<title></title>
+what is the use of body tag in html,"The BODY element contains the document content, i.e. the information that is shown in the browser’s window."
+syntax of body tag in html,<body></body>
+
+
+
+

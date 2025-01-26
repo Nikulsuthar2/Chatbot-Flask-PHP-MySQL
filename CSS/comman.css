@@ -1,0 +1,71 @@
+:root{
+    --navbg: #4162e1;
+    --mainbg: #ededed;
+    --logocolor: white;
+    --btnprimary: #4162e1;
+    --btnprimaryhover: #2f33ac;
+    --btnsec: royalblue;
+    --btnsechover: rgb(30, 52, 121);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #888;
+}
+.navbar{
+    background-color: #ffffff;
+    /* box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    align-items: center;
+    color: black;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #000000;
+}
+
+@media only screen and (max-width:600px){
+    .navbar{
+        
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 20px;
+        align-items: center;
+        color: white;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.applogo{
+    color: black;
+    font-weight: bold;
+}
+
+.adminbtn{
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+.adminbtn:hover{
+    background-color: lightgray;
+}

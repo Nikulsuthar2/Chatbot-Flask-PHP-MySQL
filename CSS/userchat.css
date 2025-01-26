@@ -1,0 +1,199 @@
+.chataccbox{
+    padding: 0;
+}
+.header{
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+}
+.backbtn{
+	text-decoration:none;
+}
+.accname{
+    font-size: 16px;
+}
+.accstatus{
+    font-size: 12px;
+}
+.chat-container{
+    height: 400px;
+    overflow: auto;
+    background-color: #ffe7b4;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+.user-text, .user-image{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.user-text-bubble{
+    padding: 5px 10px;
+    margin: 10px;
+    max-width: 200px;
+    border-radius: 10px 10px 10px 0px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+}
+.user-image-bubble{
+    padding: 5px 5px;
+    margin: 10px;
+    max-width: 200px;
+    border-radius: 10px 10px 10px 0px;
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+}
+.user-text-bubble::after,.user-image-bubble::after{
+    content: '';
+    display: block;
+    position: absolute;
+
+    left: 0;
+    top: 100%;
+    width: 20px;
+    height: 10px;
+
+    background-color: inherit;
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.msgtime{
+    font-size: 10px;
+    text-align: end;
+}
+.own-text{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.own-image{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.own-text-bubble{
+    padding: 5px 10px;
+    margin: 10px;
+    max-width: 200px;
+    border-radius: 10px 10px 0px 10px;
+    background-color: paleturquoise;
+    position: relative;
+    word-wrap: break-word;
+}
+.msgimage{
+    border-radius: 5px;
+}
+.own-image-bubble{
+    padding: 5px 5px;
+    margin: 10px;
+    max-width: 200px;
+    border-radius: 10px 10px 0px 10px;
+    background-color: paleturquoise;
+    position: relative;
+    word-wrap: break-word;
+}
+.own-text-bubble::after, .own-image-bubble::after{
+    content: '';
+    display: block;
+    position: absolute;
+
+    right: 0;
+    top: 100%;
+    width: 20px;
+    height: 10px;
+
+    background-color: inherit;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.chat-send-box{
+    padding-inline: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+#txtMsg{
+    height: 30px;
+    width: 100%;
+    padding-inline: 10px;
+    border-radius: 5px;
+    border: 1px solid #777;
+}
+#btnSend{
+    height: 30px;
+}
+.datebox{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.datetext{
+    background-color:lightsalmon;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.blockbtn, .clearbtn{
+    border:none;
+    background-color: red;
+    border-radius: 10px;
+    padding: 8px;
+    width: min-content;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.blockbtn:hover{
+    background-color: lightsalmon;
+}
+
+.clearbtn{
+    background-color: var(--btnprimary);
+}
+.clearbtn:hover{
+    background-color: var(--btnprimaryhover);
+}
+
+.blockbtn:hover{
+    background-color: lightsalmon;
+}
+
+.blockwarning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+.blcokicon{
+    font-size: 80px;
+}
+
+.imagesendbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 33px;
+    font-size: 13px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+.imagesendbtn:hover{
+    background-color: rgb(69, 199, 69);
+}
