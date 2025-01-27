@@ -109,14 +109,14 @@ Follow these steps to set up and run the project:
 
 ## Screenshots
 
-![index]()
+![index](https://github.com/Nikulsuthar2/Chatbot-Flask-PHP-MySQL/blob/main/Screenshots/index.png?raw=true)
 
-![index]()
+![signup](https://github.com/Nikulsuthar2/Chatbot-Flask-PHP-MySQL/blob/main/Screenshots/signup.png?raw=true)
 
-![index]()
+![login](https://github.com/Nikulsuthar2/Chatbot-Flask-PHP-MySQL/blob/main/Screenshots/login.png?raw=true)
 
-![index]()
+![home](./Screenshots/home1.png)
 
-![index]()
+![home2](https://github.com/Nikulsuthar2/Chatbot-Flask-PHP-MySQL/blob/main/Screenshots/home2.png?raw=true)
 
-![index]()
+![profile](https://github.com/Nikulsuthar2/Chatbot-Flask-PHP-MySQL/blob/main/Screenshots/editprofile.png?raw=true)
